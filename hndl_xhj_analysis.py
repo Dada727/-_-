@@ -80,7 +80,7 @@ def compute_stats(orders):
     std_log = statistics.stdev(log_orders) if len(orders) > 1 else 0.0
     return mean_arith, mean_geo, median, std_log
 
-# ================== 主程序（带计时） ==================
+# ================== 主程序 ==================
 def main():
     N_list = [100, 200, 500, 1000, 2000]
     num_seeds = 30
@@ -95,7 +95,7 @@ def main():
 
     results = {name: [] for name in maps}
     all_orders = {name: [] for name in maps}
-    timing = {name: [] for name in maps}  # 存储每个N的耗时（秒）
+    timing = {name: [] for name in maps}
 
     for name, (func, params) in maps.items():
         print(f"\n===== 映射: {name} =====")
@@ -120,8 +120,8 @@ def main():
         print(f"{name:10s} : 各N耗时 {['{:.3f}'.format(t) for t in timing[name]]} , 总和={total_time:.2f}秒")
     print(f"整体运行时间: {sum(sum(t) for t in timing.values()):.2f} 秒")
 
-    # ================== 绘图（保持不变） ==================
-    save_dir = "./cryp_tu"
+    # ================== 绘图 ==================
+    save_dir = "./Chaos_Permutation_Order_Analysis"
     os.makedirs(save_dir, exist_ok=True)
 
     plt.figure(figsize=(12, 7))

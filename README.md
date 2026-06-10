@@ -5,5 +5,6 @@
 - Python 3.13
 - 依赖库：math, random, collections, statistics, numpy, matplotlib
 
-##运行
+## 运行
+```bash
 会在当前文件夹生成”Chaos_Permutation_Order_Analysis”文件夹，并在其中保存绘制的结果图
